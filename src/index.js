@@ -13,20 +13,25 @@ import GenresContextProvider from "./contexts/genresContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="jumbotron">
-        <SiteHeader /> 
-        <div className="container-fluid">
+      <BrowserRouter>
+        <div className="jumbotron">
+          <SiteHeader />      {/* New Header  */}
+          <div className="container-fluid">
           <MoviesContextProvider>
-            <GenresContextProvider>    {/* NEW */}
-              <Switch>
-                . . . as before . . . 
-              </Switch>
-            </GenresContextProvider>    {/* NEW */}
-          </MoviesContextProvider>
-        </div>
+          <GenresContextProvider>
+        <Switch>
+          <Route path="/reviews/:id" component={MovieReviewPage} />
+          <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+          <Route exact path="/movies/upcoming" component={UpcomingMoviePage} />
+          <Route path="/movies/:id" component={MoviePage} />
+          <Route path="/" component={HomePage} />
+          <Redirect from="*" to="/" />
+        </Switch>
+        </GenresContextProvider>
+        </MoviesContextProvider>
       </div>
-    </BrowserRouter>
+    </div>
+  </BrowserRouter>
   );
 };
 
