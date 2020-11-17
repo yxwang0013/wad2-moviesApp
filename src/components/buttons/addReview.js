@@ -12,7 +12,8 @@ const ReviewButton = ({ movie }) => {
         }
       }}
     >
-      Write a Review
+      Write a Review  
+      
     </Link>
   );
 };
