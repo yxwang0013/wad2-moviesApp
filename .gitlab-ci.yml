@@ -3,12 +3,10 @@ image: cypress/browsers:node12.0.0-chrome73
 
 # Pipeline
 stages:
-   - install
-   - build
-   - test
-
+  - install
+  - build
+  - test
 # Jobs 
-
 install_dependencies:
   stage: install
   script:
@@ -21,6 +19,10 @@ bundle_app:
   stage: build
   script:
     - npm run build
+  artifacts:
+    paths:
+      - build/
+
 e2etest:    
     stage: test
     before_script:
