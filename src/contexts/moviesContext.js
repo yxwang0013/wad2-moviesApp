@@ -21,6 +21,14 @@ const reducer = (state, action) => {
         movies: [...state.movies],
         Top_rated:[...state.Top_rated]
       };
+      case "add-toplist":
+      return {
+        Top_rated: state.Top_rated.map((m) =>
+          m.id === action.payload.movie.id ? { ...m, toplist: true } : m
+        ),
+        movies: [...state.movies],
+        upcoming:[...state.upcoming]
+      };
     case "load":
       return { movies: action.payload.movies, upcoming: [...state.upcoming],Top_rated:[...state.Top_rated] };
     case "load-upcoming":
@@ -52,6 +60,11 @@ const MoviesContextProvider = (props) => {
   const addToWatchList = (movieId) => {
     const index = state.upcoming.map((m) => m.id).indexOf(movieId);
     dispatch({ type: "add-watchlist", payload: { movie: state.upcoming[index] } });
+  };
+
+  const addToTopList = (movieId) => {
+    const index = state.Top_rated.map((m) => m.id).indexOf(movieId);
+    dispatch({ type: "add-toplist", payload: { movie: state.Top_rated[index] } });
   };
 
   const addReview = (movie, review) => {
@@ -86,7 +99,8 @@ const MoviesContextProvider = (props) => {
         Top_rated:state.Top_rated,
         addToFavorites: addToFavorites,
         addReview: addReview,
-        addToWatchList: addToWatchList
+        addToWatchList: addToWatchList,
+        addToTopList: addToTopList
       }}
     >
       {props.children}

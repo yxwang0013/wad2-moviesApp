@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import AddToWatchlistButton from '../components/buttons/addToWatchlist';
+import AddToToplistButton from '../components/buttons/addToToplist';
 import PageTemplate from '../components/templateMovieListPage';
 import {MoviesContext} from '../contexts/moviesContext'
 
 const Top_ratedMoviePage = () => {
   const context = useContext(MoviesContext);
   const movies = context.Top_rated.filter((m) => {  // New
-    return !("watchlist" in m);
+    return !("toplist" in m);
   });
 
   
@@ -16,7 +16,7 @@ const Top_ratedMoviePage = () => {
         title='Top_rated Movie'
         movies={movies}
         action={(movie) => {
-          return <AddToWatchlistButton movie={movie} />;
+          return <AddToToplistButton movie={movie} />;
         }}
       />
   );
