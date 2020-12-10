@@ -6,7 +6,7 @@ const AddToWatchlistButton = ({ movie }) => {
 
   const handleAddToWatchlist = e => {
     e.preventDefault();
-    context.addToWatchlist(movie.id);
+    context.addToWatchList(movie.id);
   };
   return (
     <button
