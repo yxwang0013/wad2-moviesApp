@@ -50,8 +50,8 @@ const MoviesContextProvider = (props) => {
     dispatch({ type: "add-favorite", payload: { movie: state.movies[index] } });
   };
   const addToWatchList = (movieId) => {
-    const index = state.movies.map((m) => m.id).indexOf(movieId);
-    dispatch({ type: "add-watchlist", payload: { movie: state.movies[index] } });
+    const index = state.upcoming.map((m) => m.id).indexOf(movieId);
+    dispatch({ type: "add-watchlist", payload: { movie: state.upcoming[index] } });
   };
 
   const addReview = (movie, review) => {
@@ -86,7 +86,7 @@ const MoviesContextProvider = (props) => {
         Top_rated:state.Top_rated,
         addToFavorites: addToFavorites,
         addReview: addReview,
-        addToWatchList: addToWatchList,
+        addToWatchList: addToWatchList
       }}
     >
       {props.children}
