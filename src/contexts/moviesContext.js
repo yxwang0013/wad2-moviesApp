@@ -42,7 +42,11 @@ const reducer = (state, action) => {
             ? { ...m, review: action.payload.review }
             : m
         ),
-        upcoming: [...state.upcoming],
+        upcoming: state.movies.map((m) =>
+          m.id === action.payload.movie.id
+            ? { ...m, review: action.payload.review }
+            : m
+        ),
         Top_rated:[...state.Top_rated]
       };
     default:
