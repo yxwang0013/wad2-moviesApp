@@ -38,19 +38,7 @@ const MoviePage = props => {
         <Route
           path={`/movies/:id/reviews`}
           render={props => <MovieReviews movie={movie} {...props} />}
-        />
-        <div style={{marginTop:10}}><Link
-                className="btn btn-primary btn-block active"
-                to={{pathname :`/movies/${movie.id}/movieCredits`}}
-              >
-                Show Credits
-              </Link></div>
-              <div style={{marginTop:10}}><Link
-                className="btn btn-primary btn-block active"
-                to={{pathname :`/${movie.id}/similar`}}
-              >
-                Show similar movies
-              </Link></div>      
+        />      
       </>
     ) : (
       <p>Waiting for movie details</p>
