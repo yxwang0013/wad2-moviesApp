@@ -18,7 +18,6 @@ export default ({ movie }) => {
         <th>photo</th>
           <th>Cast name</th>
           <th>Character</th>
-         
         </tr>
       </thead>
       <tbody>

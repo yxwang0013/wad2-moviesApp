@@ -16,7 +16,7 @@ const MoviePage = props => {
           <MovieDetails movie={movie} />
         </PageTemplate>
         <div className="row">
-          <div className="col-12 ">
+          <div className="col-12 "style={{marginTop:10}}>
             {!props.history.location.pathname.endsWith("/reviews") ? (
               <Link
                 className="btn btn-primary btn-block active"

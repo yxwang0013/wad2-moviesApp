@@ -67,17 +67,17 @@ export default ({ movie }) => {
                 className="btn btn-primary btn-block active"
                 to={{pathname :`/movies/${movie.id}/movieCredits`}}
               >
-                Show Actors
+                Actors
           </Link>
-        </div>
-        <div style={{marginTop:10}}>
+      </div>
+      <div style={{marginTop:10}}>
           <Link
                 className="btn btn-primary btn-block active"
                 to={{pathname :`/${movie.id}/similar`}}
               >
-                Show similar movies
+                Similar movies
           </Link>
-        </div>
+      </div>
     </>
   );
 };

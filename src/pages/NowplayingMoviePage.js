@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import AddToNowplayinglistButton from '../components/buttons/addToNowplayinglist';
+import AddToMovieDetail from '../components/buttons/addToMovieDetail';
 import PageTemplate from '../components/templateMovieListPage';
 import {MoviesContext} from '../contexts/moviesContext'
 
@@ -16,10 +16,10 @@ const Now_playingMoviePage = () => {
         title='Nowplaying Movie'
         movies={movies}
         action={(movie) => {
-          return <AddToNowplayinglistButton movie={movie} />;
+          return <AddToMovieDetail movie={movie} />;
         }}
       />
   );
 };
 
-export default Now_playingMoviePage;
+export default (Now_playingMoviePage);
