@@ -15,8 +15,8 @@ export default ({ movie }) => {
     <table className="table table-hover table-striped">
       <thead>
         <tr>
-        <th>photo</th>
-          <th>Cast name</th>
+        <th>Photo</th>
+          <th>Name</th>
           <th>Character</th>
         </tr>
       </thead>

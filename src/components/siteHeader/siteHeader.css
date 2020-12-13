@@ -2,3 +2,37 @@
     padding-top: 0px;
     padding-bottom: 0px;
 }
+.dropbtn {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    min-width: 100px;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:black;
+    min-width: 100px;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {background-color: #585858 }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #585858;
+}

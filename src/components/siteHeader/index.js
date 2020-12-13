@@ -27,24 +27,17 @@ const SiteHeader = () => {
       />
       <nav className="navbar navbar-expand ">
         <ul className="navbar-nav">
+        <div class="dropdown" >
+        <button class="dropbtn">movies</button>
+        <div class="dropdown-content">
           <li className="nav-item">
             <Link className="nav-link text-white" to="/">
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/favorites">
-              Favorites
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link className="nav-link text-white" to="/movies/upcoming">
               Upcoming
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/watchlist">
-              Watchlist
             </Link>
           </li>
           <li className="nav-item">
@@ -57,6 +50,23 @@ const SiteHeader = () => {
               Nowplaying
             </Link>
           </li>
+          </div>
+          </div> 
+          <div class="dropdown" style={{marginLeft:10}}>
+          <button class="dropbtn">lists</button>
+          <div class="dropdown-content">
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/movies/favorites">
+              Favorites
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/movies/watchlist">
+              Watchlist
+            </Link>
+          </li>
+          </div>
+          </div>
         </ul>
       </nav>
     </nav>
