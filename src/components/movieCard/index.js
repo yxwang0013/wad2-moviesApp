@@ -5,7 +5,7 @@ import "../../globals/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MovieCard = ({movie, action}) => {
-console.log(action)
+
   return (
     <div className="col-sm-3">
       <div className="card  bg-white">

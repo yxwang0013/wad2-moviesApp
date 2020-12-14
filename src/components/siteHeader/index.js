@@ -27,45 +27,52 @@ const SiteHeader = () => {
       />
       <nav className="navbar navbar-expand ">
         <ul className="navbar-nav">
-        <div class="dropdown" >
-        <button class="dropbtn">movies</button>
-        <div class="dropdown-content">
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/">
-              Home
+          <div class="dropdown" >
+            <button class="dropbtn">movies</button>
+            <div class="dropdown-content">
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/">
+                  Home
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/upcoming">
-              Upcoming
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/movies/upcoming">
+                  Upcoming
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/Top_rated">
-              Top
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/movies/Top_rated">
+                  Top
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/now_playing">
-              Nowplaying
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/movies/now_playing">
+                  Nowplaying
             </Link>
-          </li>
+              </li>
+            </div>
           </div>
-          </div> 
-          <div class="dropdown" style={{marginLeft:10}}>
-          <button class="dropbtn">lists</button>
-          <div class="dropdown-content">
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/favorites">
-              Favorites
+          <div class="dropdown" style={{ marginLeft: 10 }}>
+            <button class="dropbtn">lists</button>
+            <div class="dropdown-content">
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/movies/favorites">
+                  Favorites
             </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/movies/watchlist">
-              Watchlist
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-white" to="/movies/watchlist">
+                  Watchlist
             </Link>
-          </li>
+              </li>
+            </div>
           </div>
+          <div style={{ marginLeft: 10 }}>
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/movies/people">
+              Actor
+            </Link>
+          </li>
           </div>
         </ul>
       </nav>

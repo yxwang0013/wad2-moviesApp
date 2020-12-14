@@ -16,16 +16,24 @@ import MoviesContextProvider from "./contexts/moviesContext";
 import GenresContextProvider from "./contexts/genresContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import SimilarMoviesPage from './pages/similarMoviesPage';
+import PeoplePage from './pages/peoplePage'
+import PeopleDetailsPage from './pages/peopleDetailsPage'
+import PeoplesContextProvider from "./contexts/peoplesContext";
 
 const App = () => {
   return (
-      <BrowserRouter>
-        <div className="jumbotron">
-          <SiteHeader />      {/* New Header  */}
-          <div className="container-fluid">
-          <MoviesContextProvider>
-          <GenresContextProvider>
-        <Switch>
+   <BrowserRouter>
+      <div className="jumbotron">
+        <SiteHeader /> 
+        <div className="container-fluid">
+          <MoviesContextProvider>     {/* NEW  */}
+          <PeoplesContextProvider>{/* NEW  */}
+
+          <GenresContextProvider>    {/* NEW */}
+        
+            <Switch> 
+            <Route exact path="/movies/people" component={PeoplePage} />
+            <Route exact path="/people/:id" component={PeopleDetailsPage} />
         <Route exact path="/reviews/form" component={AddMovieReviewPage} />
           <Route path="/reviews/:id" component={MovieReviewPage} />
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
@@ -38,13 +46,16 @@ const App = () => {
           <Route path="/movies/:id" component={MoviePage} />
           <Route path="/" component={HomePage} />
           <Redirect from="*" to="/" />
-        </Switch>
-        </GenresContextProvider>
-        </MoviesContextProvider>
-      </div>
-    </div>
-  </BrowserRouter>
-  );
+          </Switch>
+         
+          
+         </GenresContextProvider>    {/* NEW */}
+         </PeoplesContextProvider>
+         </MoviesContextProvider>     {/* NEW */}
+       </div>
+     </div>
+   </BrowserRouter>
+   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root")); 
