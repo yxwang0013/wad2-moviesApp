@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PageTemplate from "../components/templateMovieListPage";
+import PageTemplate from "../components/templateSimilarMovieListPage";
 import { getSimilarMovies } from "../api/tmdb-api";
 import AddToMovieDetail from '../components/buttons/addToMovieDetail';
 

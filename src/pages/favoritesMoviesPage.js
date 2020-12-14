@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import MovieListPageTemplate from "../components/templateMovieListPage";
-import AddReviewButton from '../components/buttons/addReview'
+import AddReviewButton from '../components/buttons/addMovieReview'
 import {MoviesContext} from '../contexts/moviesContext'
 
 const FavoriteMoviesPage = props => {

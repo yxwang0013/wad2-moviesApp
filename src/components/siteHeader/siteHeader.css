@@ -10,7 +10,10 @@
     border: none;
     min-width: 100px;
 }
-
+.drop{
+    padding: 2px;
+    font-size: 16px;
+}
 .dropdown {
     display: inline-block;
 }
