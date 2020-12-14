@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PageTemplate from "../components/templateMovieListPage";
 import { getSimilarMovies } from "../api/tmdb-api";
-//import AddToFavoritesButton from '../componentsttons/addToFavorites'
+import AddToMovieDetail from '../components/buttons/addToMovieDetail';
 
 const SimilarMoviesPage = props => {
   const { id } = props.match.params;
@@ -20,7 +20,7 @@ const SimilarMoviesPage = props => {
       title= {`Similar Movies`}
       movies={similarMovies}
       action={(movie) => {
-       // return <AddToFavoritesButton movie={movie} /> 
+        return <AddToMovieDetail movie={movie} />;
       }}
     />
 );
