@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../../contexts/authContext'
 import { Link, useHistory } from "react-router-dom"
+import "./login.css";
 
 export default function Login() {
 
@@ -43,7 +44,7 @@ export default function Login() {
         setLoading(false)
     }
     return (
-        <div classname="w-50">
+        <div style={{ width: 1000 }}>
             <Card classmame>
                 <Card.Body >
                     <h2 className="text-center mb-1" id="login">Log In</h2>
@@ -60,12 +61,12 @@ export default function Login() {
                         </Form.Group>
                         <div onClick={judgeMent}>
                             <p>{msg}</p>
-
-
-
-                            <Button disabled={loading} classname="d-flex align-items-center justify-content-center" type="submit">
-                                Log In
-                        </Button>
+                            <div style={{ marginLeft: 440 }}>
+                                <Button disabled={loading} classname="d-flex align-items-center justify-content-center" type="submit">
+                                    Log In
+                                </Button>
+                            </div>
+                            
                         </div>
                     </Form>
                     {/* <div className="w-100 text-center mt-3">

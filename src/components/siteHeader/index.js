@@ -27,12 +27,12 @@ const SiteHeader = () => {
       />
       <nav className="navbar navbar-expand ">
         <ul className="navbar-nav">
-        <div class="drop" style={{ marginRight: 20 }}>
-          <li className="nav-item">
-            <Link className="nav-link text-white" to="/">
-              Home
+          <div class="drop" style={{ marginRight: 20 }}>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/">
+                Home
             </Link>
-          </li>
+            </li>
           </div>
           <div class="drop" style={{ marginRight: 20 }}>
             <li className="nav-item">
@@ -41,6 +41,7 @@ const SiteHeader = () => {
             </Link>
             </li>
           </div>
+
           <div class="dropdown" >
             <button class="dropbtn">movies</button>
             <div class="dropdown-content">
@@ -75,6 +76,13 @@ const SiteHeader = () => {
                 </Link>
               </li>
             </div>
+          </div>
+          <div class="drop" style={{ marginLeft: 20 }}>
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/movies/profile">
+                Account
+              </Link>
+            </li>
           </div>
         </ul>
       </nav>

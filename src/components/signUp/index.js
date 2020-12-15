@@ -12,10 +12,10 @@ export default function Signup() {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
-    
 
 
-  const handleSubmit = async (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
         if (passwordRef.current.value !==
@@ -35,7 +35,7 @@ export default function Signup() {
     }
 
     return (
-        <>
+        <div style={{ width: 1000 }}>
             <Card classname="d-flex align-items-center justify-content-center">
                 <Card.Body>
                     <h2 className="text-center mb-4" id="signup">Sign Up</h2>
@@ -54,19 +54,18 @@ export default function Signup() {
                             <Form.Label>Password Confirmation</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
-                        
-                            
-                            <Button disabled={loading} classname="w-100" type="submit" id="signupbutton">
-                                Sign Up
+                        <div style={{ marginLeft: 440 }}>
+                        <Button disabled={loading} classname="w-100" type="submit" id="signupbutton">
+                            Sign Up
                         </Button>
-                        
+                        </div>
                     </Form>
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
                 Already have an account? Log In <Link to="/movies/login">Log In</Link>
             </div>
-        </>
+        </div>
     )
 }
 

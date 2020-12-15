@@ -25,6 +25,7 @@ import AuthProvider from "./contexts/authContext"
 import signUpPage from "./pages/signUpPage";
 import loginPage from "./pages/loginPage";
 import PrivateRoute from "./components/privateRoute"
+import profilePage from "./pages/profilePage";
 
 const App = () => {
   return (
@@ -38,6 +39,7 @@ const App = () => {
               <GenresContextProvider>    {/* NEW */}
               <AuthProvider>
                 <Switch>
+                <PrivateRoute exact path="/movies/profile" component={profilePage} />
                   <Route exact path="/movies/people" component={PeoplePage} />
                   <Route exact path="/people/:id" component={PeopleDetailsPage} />
                   <Route exact path="/reviews/form" component={AddMovieReviewPage} />
