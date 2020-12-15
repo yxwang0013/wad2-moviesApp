@@ -1,21 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PeopleReviewButton = ({ people }) => {
+const SeeDetails = ({ people }) => {
   return (
     <Link
       className="btn w-100 btn-primary "
       to={{
-        pathname: `/peoples/form`,
+        pathname: `/peoples/${people.id}`,
         state: {
           people: people
         }
       }}
     >
-      {/* Write a Review   */}
-      
+      Details
     </Link>
   );
 };
 
-export default PeopleReviewButton;
+export default SeeDetails;

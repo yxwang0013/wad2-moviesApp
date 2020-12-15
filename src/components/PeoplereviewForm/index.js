@@ -9,8 +9,8 @@ const ReviewForm = ({ people, history }) => {
   const context = useContext(PeoplesContext);
 
   const onSubmit = data => {
-    context.addReview(movie, data)
-    history.push("/movies/favorites");
+    context.addReview(people, data)
+    history.push("/movies/people");
   };
 
   return (

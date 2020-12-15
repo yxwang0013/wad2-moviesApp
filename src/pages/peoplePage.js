@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PageTemplate from '../components/templatePeopleListPage'
 import { PeoplesContext } from "../contexts/peoplesContext";
-import AddReviewButton from '../components/buttons/addPeopleReview'
+import AddPeopleButton from '../components/buttons/addPeopleReview'
 
 const PeopleListPage = () => {
   const context = useContext(PeoplesContext)
@@ -13,7 +13,7 @@ const PeopleListPage = () => {
       title='Famous Actor'
       peoples={peoples}
       action={(people) => {
-        return <AddReviewButton people={people} />
+        return <AddPeopleButton people={people} />
       }}
     />
   );
