@@ -1,19 +1,17 @@
 import React, {useContext } from "react";
-import "./reviewForm.css";
+import "./PeoplereviewForm.css";
 import useForm from "react-hook-form";
-import {MoviesContext} from '../../contexts/moviesContext'
+import {PeoplesContext} from '../../contexts/peoplesContext'
 import { withRouter } from "react-router-dom";
 
-const ReviewForm = ({ movie, history }) => {
+const ReviewForm = ({ people, history }) => {
   const { register, handleSubmit, errors, reset } = useForm();
-  const context = useContext(MoviesContext);
-  
+  const context = useContext(PeoplesContext);
 
   const onSubmit = data => {
     context.addReview(movie, data)
     history.push("/movies/favorites");
   };
-  
 
   return (
     <form className="form bg-dark text-light" onSubmit={handleSubmit(onSubmit)}>
