@@ -52,11 +52,11 @@ describe("Login", () => {
     })
     describe("Button", () => {
         it("should navigate to  home page ", () => {
-            cy.get("input").eq(0).clear().type("111@11.com")
-            cy.get("input").eq(1).clear().type("111111")
+            cy.get("input").eq(0).clear().type("20091609@mail.wit.ie")
+            cy.get("input").eq(1).clear().type("yxwang240013")
             cy.get("button").contains("Log In").click()
             cy.url().should("include", `/`);
-            cy.get("#")
+
         });
         it("should navigate to signup page ", () => {
             cy.get('a[href*="/movies/signup"]').contains("Sign Up").click()
