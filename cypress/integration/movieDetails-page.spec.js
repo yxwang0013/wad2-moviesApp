@@ -58,4 +58,5 @@ describe("Movie Details Page", () => {
     .children()
     .should("have.attr", "src")
   });
+
 });
