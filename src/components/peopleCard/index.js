@@ -36,9 +36,9 @@ const PeopleCard = ({people, action}) => {
             <span> {people.popularity}</span>
           </p>
         </div>
-        <div className="card-footer">
+        {/* <div className="card-footer">
           {action(people)}
-        </div>
+        </div> */}
       </div>
     </div>
   );
