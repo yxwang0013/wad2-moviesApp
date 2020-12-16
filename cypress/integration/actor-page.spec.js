@@ -1,6 +1,7 @@
 let stars
 let specifiedStar;
 
+
 describe('actor page', () => {
     before(() => {
         cy.request(
