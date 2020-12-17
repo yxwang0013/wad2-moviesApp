@@ -30,15 +30,5 @@ describe('actor page', () => {
         })
     })
 
-    describe('actor detail page', () => {
-
-        beforeEach(() => {
-            cy.get(".card").eq(0).click()
-        })
-
-        it('should render specfied actor', () => {
-            cy.get('h2').contains(specifiedStar.name);
-            cy.get('img').invoke('attr', 'src').should('contains', specifiedStar.profile_path)
-        })
-    })
+   
 })

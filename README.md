@@ -220,8 +220,9 @@ e.g.
 
 List reference material links (articles/blogs).
 
-+ Layout Inspector-https://www.npmjs.com/package/cypress-layout-inspector.
 + Bunding and code-splitting
+![][splitting]
+
 
 ---------------------------------
 
@@ -248,3 +249,4 @@ List reference material links (articles/blogs).
 [signuplink]: ./public/signuplink.png
 [UIdesign1]: ./public/UIdesign1.png
 [UIdesign2]: ./public/UIdesign2.png
+[splitting]: ./public/splitting.png
