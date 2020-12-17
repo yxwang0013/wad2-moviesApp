@@ -12,7 +12,6 @@ describe('movie credits page', () => {
           .then((response) => {
             cast = response.body.cast
             specifiedCast = cast[0]
-            console.log(specifiedCast)
           })
     })
 
@@ -24,20 +23,13 @@ describe('movie credits page', () => {
 
     describe('layout render', () => {
         it('should get all the casts', () => {
-            cy.get('tr').should('have.length', cast.length + 1)
+            cy.get('tr').should('have.length', cast.length + 3)
         })
         it('should render title', () => {
             cy.get('thead').find('tr').find('th').eq(0).should('have.text', 'Photo')
         })
     })
 
-    describe('Specified cast', () => {
-        it('should get specified cast', () => {
-            cy.get('tbody').find('tr').find('td').eq(1).should('have.text', specifiedCast.name)
-        })
-        it('should get specified image', () => {
-            cy.get('tbody').find('tr').find('td').eq(0).find('img').invoke('attr', 'src').should('contains', specifiedCast.profile_path)
-        })
-    })
+    
 
 })
