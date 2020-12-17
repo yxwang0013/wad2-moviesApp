@@ -221,7 +221,7 @@ List reference material links (articles/blogs).
 [component1]: ./public/component1.png
 [component2]: ./public/component2.png
 [homepage]: ./public/homepage.png
-[famous actor]: ./public/famous actor.png
+[famous actor]: ./public/famousactor.png
 [top]: ./public/top.png
 [nowplaying]: ./public/nowplaying.png
 [watchlist]: ./public/watchlist.png
