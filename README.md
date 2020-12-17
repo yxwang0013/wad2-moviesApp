@@ -53,6 +53,10 @@ Install the firebase, react-bootstrap and the ES7 React/Redux/GraphQL/React-Nati
 
 ...... Insert screenshots of the new/modified views you have added to the Movies Fan app. Include a caption for each one clearly stating its purpose and any user interaction it supports ........
 
+![][UIdesign1]
+
+![][UIdesign2]
+
 ![][homepage]
 >Shows the homepage of the movie app.
 
@@ -138,7 +142,10 @@ Install the firebase, react-bootstrap and the ES7 React/Redux/GraphQL/React-Nati
 I use firebase to complete the login and the signup function. The file name includes:
 file name: "./pages/signUpPage", "./pages/loginPage", "/src/firebase.js"
 
-I also use private route to login.
+I use private route to login.
+
+I use ES7 React/Redux/GraphQL/React-Native snippets to complete the login function.
+
 ---------------------------------
 
 # Assignment 1 - Agile Software Practice.
@@ -239,3 +246,5 @@ List reference material links (articles/blogs).
 [peoplelink]: ./public/peoplelink.png
 [loginlink]: ./public/loginlink.png
 [signuplink]: ./public/signuplink.png
+[UIdesign1]: ./public/UIdesign1.png
+[UIdesign2]: ./public/UIdesign2.png
