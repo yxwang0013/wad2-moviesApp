@@ -58,10 +58,5 @@ describe("Login", () => {
             cy.url().should("include", `/`);
 
         });
-        it("should navigate to signup page ", () => {
-            cy.get('a[href*="/movies/signup"]').contains("Sign Up").click()
-            cy.url().should("include", `/movies/signup`);
-            cy.get("#signup")
-        });
     });
 })
